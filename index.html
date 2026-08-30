@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vértice Imóveis - Encontre o lugar que combina com a sua história</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <span class="logo__primary">VÉRTICE</span>
+                <span class="logo__secondary">IMÓVEIS</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#properties">Imóveis</a></li>
+                    <li><a href="#buy">Comprar</a></li>
+                    <li><a href="#rent">Alugar</a></li>
+                    <li><a href="#about">Sobre nós</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="#search" class="btn btn--gold">Encontrar meu imóvel</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero__bg"></div>
+        <div class="container hero__content">
+            <span class="hero__tag">IMÓVEIS EXCLUSIVOS</span>
+            <h1 class="hero__title">Seu próximo endereço começa aqui.</h1>
+            <p class="hero__desc">Descubra propriedades selecionadas para quem busca localização privilegiada, arquitetura excepcional e uma nova experiência de viver.</p>
+            <div class="hero__buttons">
+                <a href="#properties" class="btn btn--primary">Explorar imóveis</a>
+                <a href="#contact" class="btn btn--outline">Falar com um especialista</a>
+            </div>
+            <div class="hero__scroll">Role para explorar ↓</div>
+        </div>
+    </section>
+
+    <!-- BUSCA -->
+    <section id="search" class="search section">
+        <div class="container">
+            <h2 class="section__title">Encontre o imóvel ideal</h2>
+            <form class="search__form" id="searchForm">
+                <div class="search__group">
+                    <label for="finalidade">Finalidade</label>
+                    <select id="finalidade">
+                        <option value="comprar">Comprar</option>
+                        <option value="alugar">Alugar</option>
+                    </select>
+                </div>
+                <div class="search__group">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo">
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="cobertura">Cobertura</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="comercial">Comercial</option>
+                    </select>
+                </div>
+                <div class="search__group">
+                    <label for="localizacao">Localização</label>
+                    <input type="text" id="localizacao" placeholder="Digite cidade, bairro ou região" />
+                </div>
+                <div class="search__group">
+                    <label for="precoMin">Preço mínimo</label>
+                    <input type="number" id="precoMin" placeholder="R$ 0" />
+                </div>
+                <div class="search__group">
+                    <label for="precoMax">Preço máximo</label>
+                    <input type="number" id="precoMax" placeholder="R$ 10.000.000" />
+                </div>
+                <div class="search__group">
+                    <label for="quartos">Quartos</label>
+                    <select id="quartos">
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3" selected>3+</option>
+                        <option value="4">4+</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn--gold search__submit">Buscar imóveis</button>
+            </form>
+            <div id="searchResults" class="search__results"></div>
+        </div>
+    </section>
+
+    <!-- IMÓVEIS EM DESTAQUE -->
+    <section id="properties" class="properties section">
+        <div class="container">
+            <h2 class="section__title">Imóveis em destaque</h2>
+            <p class="section__subtitle">Uma seleção especial de propriedades escolhidas para você.</p>
+            <div class="properties__grid" id="propertiesGrid"></div>
+            <div class="properties__favorites" id="favoritesCounter">Favoritos (0)</div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about" class="about section">
+        <div class="container about__inner">
+            <div class="about__text">
+                <h2 class="section__title">Mais do que imóveis. Novos começos.</h2>
+                <p>Na Vértice Imóveis, acreditamos que encontrar uma propriedade vai muito além de escolher um endereço. É encontrar um espaço que represente seus planos, seu estilo de vida e o futuro que você deseja construir.</p>
+                <div class="about__stats">
+                    <div><span class="stat-number" data-target="15">0</span>+ anos de experiência</div>
+                    <div><span class="stat-number" data-target="850">0</span>+ imóveis negociados</div>
+                    <div><span class="stat-number" data-target="98">0</span>% clientes satisfeitos</div>
+                    <div><span class="stat-number" data-target="25">0</span> especialistas</div>
+                </div>
+            </div>
+            <div class="about__image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop" alt="Imóvel de luxo" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section__title">Uma experiência completa</h2>
+            <div class="services__grid">
+                <div class="service-card">
+                    <h3>Compra de imóveis</h3>
+                    <p>Encontre propriedades alinhadas ao seu perfil e investimento.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Locação</h3>
+                    <p>Tenha segurança e praticidade para encontrar seu próximo imóvel.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultoria imobiliária</h3>
+                    <p>Conte com especialistas para tomar decisões mais seguras.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Avaliação de imóveis</h3>
+                    <p>Análises precisas para entender o verdadeiro valor da sua propriedade.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gestão patrimonial</h3>
+                    <p>Cuide do seu patrimônio com estratégia e inteligência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA PREMIUM -->
+    <section id="premium" class="premium section">
+        <div class="container premium__inner">
+            <h2 class="section__title premium__title">Seu patrimônio merece uma estratégia à altura.</h2>
+            <p class="premium__desc">Atendimento personalizado, conhecimento de mercado e acesso a oportunidades exclusivas.</p>
+            <a href="#contact" class="btn btn--gold">Conhecer nosso atendimento</a>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÕES -->
+    <section id="locations" class="locations section">
+        <div class="container">
+            <h2 class="section__title">Encontre seu próximo endereço</h2>
+            <div class="locations__grid" id="locationsGrid"></div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <h2 class="section__title">O que nossos clientes dizem</h2>
+            <div class="testimonials__slider" id="testimonialsSlider">
+                <div class="testimonials__track" id="testimonialsTrack"></div>
+                <button class="testimonials__arrow testimonials__arrow--prev" id="testimonialPrev">‹</button>
+                <button class="testimonials__arrow testimonials__arrow--next" id="testimonialNext">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="how" class="how section">
+        <div class="container">
+            <h2 class="section__title">Como funciona</h2>
+            <div class="how__grid">
+                <div class="how__step">
+                    <span class="how__number">01</span>
+                    <h3>Conte o que você procura</h3>
+                </div>
+                <div class="how__step">
+                    <span class="how__number">02</span>
+                    <h3>Receba imóveis selecionados</h3>
+                </div>
+                <div class="how__step">
+                    <span class="how__number">03</span>
+                    <h3>Visite suas opções favoritas</h3>
+                </div>
+                <div class="how__step">
+                    <span class="how__number">04</span>
+                    <h3>Feche seu novo negócio</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="cta section">
+        <div class="container cta__inner">
+            <h2 class="section__title">Pronto para encontrar seu próximo endereço?</h2>
+            <p>Conte com especialistas para transformar sua busca em uma experiência simples, segura e personalizada.</p>
+            <a href="#contact" class="btn btn--gold">Falar com um especialista</a>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CONTATO -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section__title">Fale conosco</h2>
+            <form class="contact__form" id="contactForm">
+                <div class="contact__group">
+                    <input type="text" id="contactName" placeholder="Nome" />
+                </div>
+                <div class="contact__group">
+                    <input type="email" id="contactEmail" placeholder="E-mail" />
+                </div>
+                <div class="contact__group">
+                    <input type="tel" id="contactPhone" placeholder="Telefone" />
+                </div>
+                <div class="contact__group">
+                    <select id="contactType">
+                        <option value="">Tipo de imóvel</option>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="cobertura">Cobertura</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="comercial">Comercial</option>
+                    </select>
+                </div>
+                <div class="contact__group">
+                    <select id="contactGoal">
+                        <option value="">Objetivo</option>
+                        <option value="comprar">Comprar</option>
+                        <option value="alugar">Alugar</option>
+                        <option value="investir">Investir</option>
+                    </select>
+                </div>
+                <div class="contact__group contact__group--full">
+                    <textarea id="contactMessage" placeholder="Mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn btn--gold contact__submit">Enviar mensagem</button>
+            </form>
+            <div id="contactSuccess" class="contact__success"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#" class="logo">
+                    <span class="logo__primary">VÉRTICE</span>
+                    <span class="logo__secondary">IMÓVEIS</span>
+                </a>
+                <p>Imóveis exclusivos. Experiências extraordinárias.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#properties">Imóveis</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h4>Contato</h4>
+                <ul>
+                    <li>Telefone: (11) 99999-9999</li>
+                    <li>WhatsApp: (11) 99999-9999</li>
+                    <li>E-mail: contato@verticeimoveis.com</li>
+                    <li>Endereço: Av. Paulista, 1000 - São Paulo</li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <h4>Redes sociais</h4>
+                <div class="footer__social-icons">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="LinkedIn">LI</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <span>© 2026 Vértice Imóveis. Todos os direitos reservados.</span>
+                <div>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP -->
+    <a href="#" class="whatsapp" id="whatsappBtn" target="_blank" rel="noopener">
+        <span class="whatsapp__icon">💬</span>
+        <span class="whatsapp__text">Fale conosco</span>
+    </a>
+
+    <!-- MODAL -->
+    <div class="modal" id="propertyModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <div class="modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
